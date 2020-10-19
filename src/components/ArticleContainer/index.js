@@ -2,7 +2,7 @@ import React from 'react';
 import Article from './../Article'
 import { ArticleWrap, ArticleOutterBorder, Welcome, Reader, ReaderSpan, MainContainer, Slogan } from './styles'
 
-const ArticleContainer = ( { articles } ) => {
+const ArticleContainer = ( {articles} ) => {
     return (
         <ArticleWrap>
             <ArticleOutterBorder>
@@ -13,9 +13,10 @@ const ArticleContainer = ( { articles } ) => {
                         </ReaderSpan>
                     </Reader>
                 </Slogan>
-                <MainContainer> {
-                    articles.map( ( article, index ) => (
-                        <Article key={index}
+                <MainContainer>
+                    {
+                    articles.map( ( article) => (
+                        <Article key={article.id}
                             articleImg={
                                 article.img_url
                             }

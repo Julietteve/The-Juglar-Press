@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 import Home from './pages/home';
 import MasterDetail from './pages/masterDetail';
 import {createGlobalStyle} from 'styled-components/macro';

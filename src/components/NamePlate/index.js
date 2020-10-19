@@ -1,5 +1,5 @@
 import React from 'react';
-import {NameplateImg, SplitterTop, Name} from './styles';
+import {SplitterTop, Name} from './styles';
 
 const NamePlate = () => {
     return (
