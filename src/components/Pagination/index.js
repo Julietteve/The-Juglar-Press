@@ -18,5 +18,9 @@ const Pagination = ({articlesPerPage, totalArticles}) => {
         </div>
     );
 };
+// const indexLastArticle = currentPage*articlesPerPage;
+//     const indexFirstArticle = indexLastArticle -articlesPerPage;
+//     const currentArticles = articles.slice(indexFirstArticle, indexLastArticle);
+
 
 export default Pagination;

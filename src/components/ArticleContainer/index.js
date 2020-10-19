@@ -14,7 +14,7 @@ const ArticleContainer = ( {articles} ) => {
                     </Reader>
                 </Slogan>
                 <MainContainer>
-                    {
+                    {/* {
                     articles.map( ( article) => (
                         <Article key={article.id}
                             articleImg={
@@ -30,7 +30,8 @@ const ArticleContainer = ( {articles} ) => {
                                 article.url
                             }/>
                     ) )
-                } </MainContainer>
+                }  */}
+                </MainContainer>
 
             </ArticleOutterBorder>
 
