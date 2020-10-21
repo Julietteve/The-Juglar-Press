@@ -2,8 +2,10 @@ import styled from 'styled-components/macro'
 
 export const Category = styled.p`
   font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bolder;
   text-align: center;
-  font-family: 'Rye', cursive;
+  font-family: 'Old Standard TT', serif;
   transition: all .2s ease-in-out; 
   cursor: pointer;
   &:hover{

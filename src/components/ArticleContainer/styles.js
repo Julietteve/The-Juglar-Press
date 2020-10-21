@@ -41,12 +41,6 @@ export const ReaderSpan = styled.span `
     padding:0 10px; 
 `;
 
-export const MainContainer = styled.div `
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-`;
-
 export const Slogan = styled.div `
     padding-left: 4%;
     padding-right: 4%;

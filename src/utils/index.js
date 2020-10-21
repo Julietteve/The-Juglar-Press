@@ -27,12 +27,14 @@ export const getCategoryId = (category) =>{
                 return 2;
             case 'technology':
                 return 3;
-            case 'shows':
+            case 'spectacles':
                 return 4;
             case 'sports':
                 return 5;
             case 'design':
                 return 6;
+            default:
+                return 0;
         }
 }
 
@@ -47,6 +49,26 @@ export const formatData = (article) =>(
         date: article.date,
     }
 )
+
+export const getCategoryName = (category) =>{
+
+    switch(category){
+        case 1 :
+            return 'Politica';
+        case 2:
+            return 'Internacional';
+        case 3:
+            return 'Tecnología';
+        case 4:
+            return 'Espectáculos';
+        case 5 :
+            return 'Deportes';
+        case 6 :
+            return 'Diseño';
+        default:
+            return undefined;
+    }
+}
 
 
 

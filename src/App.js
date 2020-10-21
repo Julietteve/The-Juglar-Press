@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import {useSelector} from 'react-redux';
-import Home from './pages/home';
-import MasterDetail from './pages/masterDetail';
+import Main from './pages/Main';
 import {createGlobalStyle} from 'styled-components/macro';
 
 const GlobalStyle = createGlobalStyle`
@@ -19,8 +17,7 @@ const App = () => {
   <div>
     <BrowserRouter>
        <GlobalStyle/>
-      <Route  path="/" component={Home}/>
-      <Route  path="/categorias" component={MasterDetail}/>
+      <Route  path="/" component={Main}/>
     </BrowserRouter>
   </div>
   )
