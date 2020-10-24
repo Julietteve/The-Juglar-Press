@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Main from './pages/Main';
 import {createGlobalStyle} from 'styled-components/macro';
 
@@ -17,7 +17,13 @@ const App = () => {
   <div>
     <BrowserRouter>
        <GlobalStyle/>
-      <Route  path="/" component={Main}/>
+       <Switch>
+        <Route exact path="/:id" children={<Main></Main>}>
+        </Route>
+        <Route path="/">
+        <Main></Main>
+        </Route>
+       </Switch>
     </BrowserRouter>
   </div>
   )

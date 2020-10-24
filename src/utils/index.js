@@ -17,21 +17,18 @@ export const formatDate = (date) => {
 }
 
 export const getCategoryId = (category) =>{
-
-    const toLowerCategory = category.toLowerCase();
-
-    switch(toLowerCategory){
-            case 'politics':
+    switch(category){
+            case 'Politica':
                 return 1;
-            case 'international':
+            case 'Internacional':
                 return 2;
-            case 'technology':
+            case 'Tecnología':
                 return 3;
-            case 'spectacles':
+            case 'Espectáculos':
                 return 4;
-            case 'sports':
+            case  'Deportes':
                 return 5;
-            case 'design':
+            case 'Diseño':
                 return 6;
             default:
                 return 0;

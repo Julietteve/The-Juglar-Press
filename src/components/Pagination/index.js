@@ -1,26 +1,23 @@
 import React from 'react';
+import {PaginationContainer, PaginationItem, Page} from './styles'
 
-const Pagination = ({articlesPerPage, totalArticles}) => {
+const Pagination = ({articlesPerPage, totalArticles,paginate}) => {
     const pageNumbers = [];
     for(let i = 1; i<= Math.ceil(articlesPerPage/totalArticles); i++){
         pageNumbers.push(i);
     }
 
     return (
-        <div>
+        <PaginationContainer>
             {pageNumbers.map(number=>(
-                <ul>
-                <li key={number}>
-                    <a href= "!#">{number}</a>
-                </li>
-                </ul>
+                <PaginationItem key={number}>
+                    <Page onClick={() => paginate(number)} href= "!#" >{number}</Page>
+                </PaginationItem>
             ))}
-        </div>
+        </PaginationContainer>
     );
 };
-// const indexLastArticle = currentPage*articlesPerPage;
-//     const indexFirstArticle = indexLastArticle -articlesPerPage;
-//     const currentArticles = articles.slice(indexFirstArticle, indexLastArticle);
+
 
 
 export default Pagination;

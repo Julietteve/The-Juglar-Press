@@ -49,3 +49,16 @@ export const Slogan = styled.div `
     justify-content: center;
     flex-direction: column;
 `;
+export const CategoryName = styled.div`
+    color:  #F5F2D5;
+    font-family: 'Rye', cursive;
+    font-size: 2em;
+    letter-spacing: 2px;
+    padding: 2%;
+    text-align: center;
+    text-transform: uppercase;
+    padding:0;
+    background-color:  #282723;
+    width: 90%;
+    margin : 0 auto;
+`;

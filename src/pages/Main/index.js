@@ -1,11 +1,11 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
 import {useSelector, useDispatch} from 'react-redux';
 import {dataFetching} from '../../utils/api/dataFetching';
-import { Container } from './styles';
-import { AsideBar, NamePlate, SearchBar, NavBar, ArticleContainer,ArticleList,Loading } from '../../components';
-import { getCategoryId, getCategoryName } from '../../utils';
+import {getCategoryName} from '../../utils/index'
 import {setCategory} from '../../redux/actions'
+import { Container } from './styles';
+import { AsideBar, NamePlate, SearchBar, NavBar, ArticleContainer} from '../../components';
 
 const Main = () => {
 
@@ -15,16 +15,35 @@ const Main = () => {
 
     useEffect(()=>{
         dataFetching(dispatch, keyword, category);
-    }, [keyword,id,category,dispatch])
+    }, [keyword,id,category,dispatch]);
+
+    if(getCategoryName(category)!== id){
+        dispatch(setCategory(id));
+    }
+
+    const [currentPage] = useState(1);
+    const [articlesPerPage] = useState(10);
+
+    const indexOfLastArticle = currentPage * articlesPerPage;
+    const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+    const currentArticles = articles.slice(indexOfFirstArticle, indexOfLastArticle);
+
+    // Change page
+ 
 
     return (
+        
         <div>
             <NamePlate/>
             <SearchBar/>
                 <Container>
                 <NavBar/>
                 <ArticleContainer 
-                articles={isLoading ? <Loading></Loading> : <ArticleList articles={articles}/>}/>
+                articles= {currentArticles} 
+                hasError={hasError} 
+                isLoading={isLoading} 
+                categoryName={getCategoryName(category)}
+                />
             <AsideBar/>
             </Container>
         </div>
