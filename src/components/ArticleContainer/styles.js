@@ -62,3 +62,18 @@ export const CategoryName = styled.div`
     width: 90%;
     margin : 0 auto;
 `;
+
+export const Keyword = styled.div`
+     color:  #F5F2D5;
+    font-family: 'Rye', cursive;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    padding: 2%;
+    text-align: center;
+    padding: 1%;
+    background-color:   #282723;
+    width: 90%;
+    margin : 0 auto;
+    font-style:italic;
+    text-transform:uppercase;
+`;

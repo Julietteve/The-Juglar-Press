@@ -1,8 +1,8 @@
 import React from 'react';
-import  {ArticleList, Loading, HasError, Pagination} from '../index';
-import { ArticleWrap, ArticleOutterBorder, Welcome, Reader, ReaderSpan, Slogan, CategoryName} from './styles'
+import  {ArticleList, Loading, HasError} from '../index';
+import { ArticleWrap, ArticleOutterBorder, Welcome, Reader, ReaderSpan, Slogan, CategoryName, Keyword, Key} from './styles'
 
-const ArticleContainer = ( {articles, hasError, isLoading, categoryName, articlesPerPage, totalArticles, paginate} ) => {
+const ArticleContainer = ( {articles, hasError, isLoading, categoryName, keywordSearch} ) => {
     return (
         <ArticleWrap>
             <ArticleOutterBorder>
@@ -13,15 +13,11 @@ const ArticleContainer = ( {articles, hasError, isLoading, categoryName, article
                         </ReaderSpan>
                     </Reader>
                 </Slogan>
-                         {categoryName && <CategoryName>{categoryName}</CategoryName>}
+                         {categoryName && !keywordSearch && !isLoading && <CategoryName>{categoryName}</CategoryName>}
+                         {keywordSearch && !isLoading && <Keyword>{`Resultados para :  ${keywordSearch}`}</Keyword>}
                          {articles && <ArticleList articles={articles}/>}
                          {isLoading && <Loading/>}
-                         {hasError && <HasError/>}
-                         <Pagination
-                         articlesPerPage={articlesPerPage}
-                         totalArticles={totalArticles}
-                         paginate={paginate}
-                         ></Pagination>
+                         {hasError && !isLoading && <HasError/>}
             </ArticleOutterBorder>
         </ArticleWrap>
 

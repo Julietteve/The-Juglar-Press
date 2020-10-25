@@ -13,13 +13,14 @@ const Main = () => {
     const {hasError, isLoading, keyword, category, articles} = useSelector((state) => state);
     const dispatch = useDispatch();
 
+    if(getCategoryName(category)!== id){
+        dispatch(setCategory(id));
+    }
+    
     useEffect(()=>{
         dataFetching(dispatch, keyword, category);
     }, [keyword,id,category,dispatch]);
 
-    if(getCategoryName(category)!== id){
-        dispatch(setCategory(id));
-    }
 
     const [currentPage] = useState(1);
     const [articlesPerPage] = useState(10);
@@ -27,9 +28,6 @@ const Main = () => {
     const indexOfLastArticle = currentPage * articlesPerPage;
     const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
     const currentArticles = articles.slice(indexOfFirstArticle, indexOfLastArticle);
-
-    // Change page
- 
 
     return (
         
@@ -43,6 +41,7 @@ const Main = () => {
                 hasError={hasError} 
                 isLoading={isLoading} 
                 categoryName={getCategoryName(category)}
+                keywordSearch={keyword}
                 />
             <AsideBar/>
             </Container>

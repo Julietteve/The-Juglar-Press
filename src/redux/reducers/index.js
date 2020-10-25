@@ -42,13 +42,14 @@ const reducers = (state= initialState, action) => {
                 isLoading: true,
                 category: getCategoryId(action.payload.category),
                 articles: [],
+                keyword: undefined,
             };
         case SET_SEARCH_KEYWORD :
             return{
                 ...state,
                 isLoading: true,
                 keyword: action.payload.keyword,
-                articles: []
+                articles: [],
             };
         default:
             return state;
