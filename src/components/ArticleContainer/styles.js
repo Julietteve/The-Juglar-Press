@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 export const ArticleWrap = styled.div `
     width: 65%;
     padding:0;
+    height: auto;
 `;
 
 export const ArticleOutterBorder = styled.div `
@@ -77,3 +78,35 @@ export const Keyword = styled.div`
     font-style:italic;
     text-transform:uppercase;
 `;
+
+export const PaginationContainer = styled.div`
+    ul{
+        display:flex;
+        justify-content:center;
+        align-content:center;
+        align-items:center;
+        text-align:center;
+        padding:2%;
+    }
+    
+    ul li{
+        margin: 2%;
+    list-style: none;
+    display:inline;
+    }
+
+    a{
+    font-size: 1.2em;  
+    text-decoration: none;
+    color:  #282723;
+    font-family: 'Old Standard TT', serif;
+    padding: 2%;
+    transition: all .2s ease-in-out; 
+    }
+
+    a:hover{
+    transform: scale(1.2);
+    color: #7A786A;
+    }
+`;
+

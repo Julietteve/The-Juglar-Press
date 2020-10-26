@@ -1,8 +1,9 @@
 import React from 'react';
 import  {ArticleList, Loading, HasError} from '../index';
-import { ArticleWrap, ArticleOutterBorder, Welcome, Reader, ReaderSpan, Slogan, CategoryName, Keyword, Key} from './styles'
+import Pagination from "react-js-pagination";
+import { ArticleWrap, ArticleOutterBorder, Welcome, Reader, ReaderSpan, Slogan, CategoryName, Keyword, PaginationContainer, Footer} from './styles'
 
-const ArticleContainer = ( {articles, hasError, isLoading, categoryName, keywordSearch} ) => {
+const ArticleContainer = ( {articles, hasError, isLoading, categoryName, keywordSearch, activePage, onChange, totalItemsCount} ) => {
     return (
         <ArticleWrap>
             <ArticleOutterBorder>
@@ -14,11 +15,28 @@ const ArticleContainer = ( {articles, hasError, isLoading, categoryName, keyword
                     </Reader>
                 </Slogan>
                          {categoryName && !keywordSearch && !isLoading && <CategoryName>{categoryName}</CategoryName>}
-                         {keywordSearch && !isLoading && <Keyword>{`Resultados para :  ${keywordSearch}`}</Keyword>}
+                         {keywordSearch && !isLoading && <Keyword>{`Resultados para  " ${keywordSearch} "`}</Keyword>}
                          {articles && <ArticleList articles={articles}/>}
                          {isLoading && <Loading/>}
                          {hasError && !isLoading && <HasError/>}
+                       
+            <PaginationContainer>
+            
+          
+                
+            <Pagination
+                   activePage={ activePage }
+                   itemsCountPerPage={ 10 }
+                   totalItemsCount={  totalItemsCount }
+                   pageRangeDisplayed={ 10 }
+                   onChange={ onChange }
+                />
+            
+                         
+            </PaginationContainer>
+
             </ArticleOutterBorder>
+  
         </ArticleWrap>
 
     );

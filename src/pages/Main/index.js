@@ -4,7 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {dataFetching} from '../../utils/api/dataFetching';
 import {getCategoryName} from '../../utils/index'
 import {setCategory} from '../../redux/actions'
-import { Container } from './styles';
+import { Container, Footer, MainWrapper} from './styles';
 import { AsideBar, NamePlate, SearchBar, NavBar, ArticleContainer} from '../../components';
 
 const Main = () => {
@@ -16,21 +16,24 @@ const Main = () => {
     if(getCategoryName(category)!== id){
         dispatch(setCategory(id));
     }
-    
+
     useEffect(()=>{
         dataFetching(dispatch, keyword, category);
     }, [keyword,id,category,dispatch]);
 
+    const handlePageChange = ( pageNumber ) => {
+        setCurrentPage( pageNumber )
+     };
 
-    const [currentPage] = useState(1);
-    const [articlesPerPage] = useState(10);
+    const articlesPerPage = 10;
+    const [ activePage, setCurrentPage ] = useState( 1 );
 
-    const indexOfLastArticle = currentPage * articlesPerPage;
+    const indexOfLastArticle  = activePage * articlesPerPage;
     const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-    const currentArticles = articles.slice(indexOfFirstArticle, indexOfLastArticle);
+    const currentArticles     = articles.slice( indexOfFirstArticle, indexOfLastArticle );
 
     return (
-        
+        <MainWrapper>
         <div>
             <NamePlate/>
             <SearchBar/>
@@ -42,10 +45,19 @@ const Main = () => {
                 isLoading={isLoading} 
                 categoryName={getCategoryName(category)}
                 keywordSearch={keyword}
+                activePage={ activePage }
+                totalItemsCount={ articles.length }
+                onChange={ handlePageChange }
                 />
             <AsideBar/>
             </Container>
+            <Footer>Printed with Love</Footer>
+            
+
+           
+
         </div>
+           </MainWrapper>
     )
 }
 

@@ -13,6 +13,7 @@ display: flex;
   width: 15%;
   padding: 1%;
   padding-left: 0;
+
 `;
 
 export const Title = styled.div `
@@ -41,7 +42,46 @@ export const Globus = styled.img `
     width: 70%;
 `;
 
-export const Trend = styled.p`
-    text-align: center;
+export const Trend = styled.button`
+    color:#282723 ;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 0.9em;
     font-family: 'IM Fell English SC', serif;
+    border-color: transparent;
+    background-color: transparent;
+    padding: 1%;
+    transition: all .2s ease-in-out; 
+    cursor: pointer;
+
+    :focus{
+        outline:none
+    }
+    :hover{
+    transform: scale(1.1);
+    color: #7A786A;
+  }
+
+`;
+
+export const TrendContainer = styled.div`
+    padding: 5px;
+    margin: 5%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+`;
+
+export const Trendings = styled.div`
+   font-family: 'IM Fell English SC', serif;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 25px;
+    border: 1px solid #7A786A;
+    color: #282723;
+    padding: 2%;
+    margin: 2%;
+
+
 `;

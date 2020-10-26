@@ -1,11 +1,11 @@
 import React from 'react';
-import {Container, LoadingText} from './styles'
+import {Container, Wheel} from './styles'
 
 const Loading = () => {
     return (
         <div>
             <Container>
-              <LoadingText>Cargando</LoadingText>
+                <Wheel src="images/engine.png"></Wheel>
             </Container>
         </div>
     );

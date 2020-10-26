@@ -43,6 +43,7 @@ const reducers = (state= initialState, action) => {
                 category: getCategoryId(action.payload.category),
                 articles: [],
                 keyword: undefined,
+                trend:false
             };
         case SET_SEARCH_KEYWORD :
             return{

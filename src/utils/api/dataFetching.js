@@ -1,7 +1,7 @@
 import {apiCalling} from '../api/apiCalling';
 import {formatDate} from '../../utils'
 
-export const dataFetching = (dispatch, keyword, category) =>
+export const dataFetching = (dispatch, keyword, category,) =>
 {
     if(category && !keyword)
     {
@@ -15,8 +15,7 @@ export const dataFetching = (dispatch, keyword, category) =>
     {
         let now = new Date();
         let today = formatDate( now );
-        dispatch(apiCalling(`https://api.canillitapp.com/latest/${today}`))
-
+        dispatch(apiCalling(`https://api.canillitapp.com/latest/${today}`));
     }
 }
 
