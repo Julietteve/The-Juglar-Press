@@ -7,8 +7,10 @@ import {
   SideBar, 
   ContainerInput, 
   SearchingBar, 
-  SplitterTop
+  SplitterTop,
+  // Btn
 } from './styles';
+// import {FiSearch} from 'react-icons/fi'
 import {setSearchKeyword} from '../../redux/actions'
 
 const SearchBar = () => {
@@ -33,6 +35,7 @@ const SearchBar = () => {
                             onChange={(e)=>setValue(e.target.value)}
                             onKeyPress={dispatchSearch}
                         />
+                       {/* <Btn onClick={()=>dispatch(setSearchKeyword(keyword))}><FiSearch/></Btn> */}
                     <SideBar>B A</SideBar>
                  </ContainerInput>
               <SideBarOut>Est 2020</SideBarOut>

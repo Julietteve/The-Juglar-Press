@@ -46,6 +46,7 @@ export const SearchingBar = styled.input`
     font-weight: lighter;
     text-transform:uppercase;
     text-align: center;
+    align-items:center;
 
     @media only screen and (max-width: 600px) {
       font-size: 0.8em;
@@ -72,5 +73,19 @@ export const SideBarOut= styled.p`
   @media only screen and (max-width: 600px) {
     display:none;
     }
+`;
+
+export const Btn = styled.button`
+  display:flex;
+  font-size:0.8em;
+  align-items:center;
+  font-size:2rem;
+  color:#7A786A;
+  outline:none;
+  border:transparent;
+  font-family: 'Old Standard TT', serif;
+  background-color:transparent;
+  cursor: pointer;
+  
 `;
 
