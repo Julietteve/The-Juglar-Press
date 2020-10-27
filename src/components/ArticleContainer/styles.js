@@ -14,12 +14,11 @@ export const ArticleOutterBorder = styled.div `
     margin-top: 5%;
     padding :0;
     border-left: 2px solid #7A786A;
-    border-right: 2px solid #7A786A;
-   
+    border-right: 2px solid #7A786A; 
 `;
 
 export const Welcome = styled.div `
-   font-family: 'Ewert', cursive;
+    font-family: 'Ewert', cursive;
     text-align: center;
     padding-bottom:10px;
     font-size: 2.5em;
@@ -27,13 +26,13 @@ export const Welcome = styled.div `
     color:  #282723;
 
     @media only screen and (max-width: 600px) {
-      font-size: 1.5em;
-      letter-spacing: 3px;
+    font-size: 1.5em;
+    letter-spacing: 3px;
   }
 `;
 
 export const Reader = styled.h2 `
-    font-family: 'Old Standard TT', serif;
+   font-family: 'Old Standard TT', serif;
    padding-top: 0;
    font-size: 1em;
    font-weight: lighter;
@@ -47,7 +46,7 @@ export const Reader = styled.h2 `
    margin: 10px 0 20px; 
 
    @media only screen and (max-width: 600px) {
-      font-size: 0.8em;
+    font-size: 0.8em;
   }
 `;
 export const ReaderSpan = styled.span `
@@ -63,7 +62,7 @@ export const Slogan = styled.div `
     justify-content: center;
     flex-direction: column;
 `;
-export const CategoryName = styled.div`
+export const CategoryName = styled.div `
     color:  #F5F2D5;
     font-family: 'Rye', cursive;
     font-size: 2em;
@@ -77,12 +76,12 @@ export const CategoryName = styled.div`
     margin : 0 auto;
 
     @media only screen and (max-width: 600px) {
-   font-size:1.8em;
+    font-size:1.8em;
     }
 `;
 
-export const Keyword = styled.div`
-     color:  #F5F2D5;
+export const Keyword = styled.div `
+    color:  #F5F2D5;
     font-family: 'Rye', cursive;
     font-size: 1.5em;
     letter-spacing: 2px;
@@ -100,7 +99,7 @@ export const Keyword = styled.div`
     }
 `;
 
-export const PaginationContainer = styled.div`
+export const PaginationContainer = styled.div `
     ul{
         display:flex;
         justify-content:center;
@@ -111,7 +110,7 @@ export const PaginationContainer = styled.div`
     }
     
     ul li{
-        margin: 2%;
+    margin: 2%;
     list-style: none;
     display:inline;
     }
@@ -130,4 +129,3 @@ export const PaginationContainer = styled.div`
     color: #7A786A;
     }
 `;
-

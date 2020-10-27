@@ -14,10 +14,10 @@ export const Footer = styled.div`
     font-family: 'Meie Script', cursive;
     font-size: 1em;
     color: black;
-   bottom:0;
-   flex-shrink: 0;
+    bottom:0;
+    flex-shrink: 0;
 `;
  
 export const MainWrapper = styled.div`
-   min-height:100%;
+    min-height:100%;
 `;

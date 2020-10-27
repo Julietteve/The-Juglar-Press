@@ -1,6 +1,5 @@
 import styled, {keyframes} from 'styled-components/macro'
 
-
 export const Container = styled.div`
     display: flex;
     justify-content: colum;
@@ -16,16 +15,15 @@ export const spin = keyframes`
     to {
         transform:rotate(360deg);
     }
-
 `;
 
 export const Wheel = styled.img`
-    margin: 0 auto;
-    filter: sepia(80%);
-   -webkit-filter: sepia(80%);
-   width: 30%;
-   animation-name: ${spin};
- animation-duration: 5000ms;
+  margin: 0 auto;
+  filter: sepia(80%);
+  -webkit-filter: sepia(80%);
+  width: 30%;
+  animation-name: ${spin};
+  animation-duration: 5000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
 `;

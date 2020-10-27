@@ -1,6 +1,14 @@
 import React , {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import {SplitterBottom, Container, SideBarOut, SideBar, ContainerInput, SearchingBar, SplitterTop} from './styles';
+import {
+  SplitterBottom, 
+  Container, 
+  SideBarOut, 
+  SideBar, 
+  ContainerInput, 
+  SearchingBar, 
+  SplitterTop
+} from './styles';
 import {setSearchKeyword} from '../../redux/actions'
 
 const SearchBar = () => {
@@ -13,7 +21,7 @@ const SearchBar = () => {
       }
     }
     return (
-        <div>
+      <div>
         <SplitterTop/>
           <Container>
              <SideBarOut>Free edition</SideBarOut>
@@ -30,7 +38,7 @@ const SearchBar = () => {
               <SideBarOut>Est 2020</SideBarOut>
           </Container>
         <SplitterBottom/>
-        </div>
+      </div>
     );
 };
 

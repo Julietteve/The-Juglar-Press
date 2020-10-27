@@ -14,18 +14,15 @@ const GlobalStyle = createGlobalStyle`
 
 const App = () => {
   return(
-  <div>
-    <BrowserRouter>
-       <GlobalStyle/>
-       <Switch>
-        <Route exact path="/:id" children={<Main></Main>}>
-        </Route>
-        <Route path="/">
-        <Main></Main>
-        </Route>
-       </Switch>
-    </BrowserRouter>
-  </div>
+    <div>
+      <BrowserRouter>
+        <GlobalStyle/>
+        <Switch>
+            <Route exact path="/:id" children={<Main></Main>}/>
+            <Route path="/"><Main/></Route>
+        </Switch>
+      </BrowserRouter>
+    </div>
   )
 };
 

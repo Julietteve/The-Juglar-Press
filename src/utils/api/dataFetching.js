@@ -1,7 +1,7 @@
 import {apiCalling} from '../api/apiCalling';
 import {formatDate} from '../../utils'
 
-export const dataFetching = (dispatch, keyword, category,) =>
+export const dataFetching = (dispatch, keyword, category) =>
 {
     if(category && !keyword)
     {

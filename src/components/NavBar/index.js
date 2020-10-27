@@ -11,8 +11,8 @@ const NavBar = () => {
     }
     return (
         <Nav>
-                <Hand src="images/vintage-hand.png"></Hand>
-                <CategoryTitle>Categorias</CategoryTitle>
+            <Hand src="images/vintage-hand.png"></Hand>
+            <CategoryTitle>Categorias</CategoryTitle>
                 {
                     categoryName.map((category) =>
                     <Link style={{textDecoration:'none', color:'#282723'}} to={`/${category}`}>

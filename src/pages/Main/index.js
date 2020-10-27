@@ -5,7 +5,14 @@ import {dataFetching} from '../../utils/api/dataFetching';
 import {getCategoryName} from '../../utils/index'
 import {setCategory} from '../../redux/actions'
 import { Container, Footer, MainWrapper} from './styles';
-import { AsideBar, NamePlate, SearchBar, NavBar, ArticleContainer, MobileNavBar} from '../../components';
+import { 
+    AsideBar, 
+    NamePlate, 
+    SearchBar, 
+    NavBar, 
+    ArticleContainer, 
+    MobileNavBar
+} from '../../components';
 
 const Main = () => {
 
@@ -37,29 +44,27 @@ const Main = () => {
 
     return (
         <MainWrapper>
-        <div>
-            <NamePlate  toggle={toggle}/>
-            <SearchBar/>
+            <div>
+                <NamePlate  toggle={toggle}/>
+                <SearchBar/>
                 <Container>
-                <NavBar/>
-                <MobileNavBar 
-                isOpen={isOpen} 
-                toggle={toggle}/>
-                <ArticleContainer 
-                articles= {currentArticles} 
-                hasError={hasError} 
-                isLoading={isLoading} 
-                categoryName={getCategoryName(category)}
-                keywordSearch={keyword}
-                activePage={ activePage }
-                totalItemsCount={ articles.length }
-                onChange={ handlePageChange }
-                />
-            <AsideBar/>
-            </Container>
-            <Footer>Printed with Love</Footer>
-        </div>
-           </MainWrapper>
+                    <NavBar/>
+                    <MobileNavBar isOpen={isOpen} toggle={toggle}/>
+                    <ArticleContainer 
+                        articles= {currentArticles} 
+                        hasError={hasError} 
+                        isLoading={isLoading} 
+                        categoryName={getCategoryName(category)}
+                        keywordSearch={keyword}
+                        activePage={ activePage }
+                        totalItemsCount={ articles.length }
+                        onChange={ handlePageChange }
+                     />
+                    <AsideBar/>
+                </Container>
+                <Footer>Printed with Love</Footer>
+            </div>
+        </MainWrapper>
     )
 }
 

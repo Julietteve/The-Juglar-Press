@@ -13,7 +13,6 @@ const initialState = {
     keyword: undefined,
     category: undefined,
     articles: [],
-    
 }
 
 const reducers = (state= initialState, action) => {
