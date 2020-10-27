@@ -13,6 +13,10 @@ display: flex;
   width: 15%;
   padding: 1%;
   padding-left: 0;
+  
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 
 `;
 

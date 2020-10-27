@@ -11,6 +11,11 @@ export const ContainerInput = styled.div`
   justify-content: space-between;
   border-left: 1px solid gray;
   border-right : 1px solid gray;
+  vertical-align:middle;
+
+  @media only screen and (max-width: 600px) {
+      border:none;
+  }
 `;
 
 export const Nameplate = styled.h2`
@@ -41,6 +46,10 @@ export const SearchingBar = styled.input`
     font-weight: lighter;
     text-transform:uppercase;
     text-align: center;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 0.8em;
+  }
 `;
 
 export const SideBar= styled.p`
@@ -59,5 +68,9 @@ export const SideBarOut= styled.p`
   text-align: center;
   font-family: 'Meie Script', cursive;
   color: #020202;
+
+  @media only screen and (max-width: 600px) {
+    display:none;
+    }
 `;
 

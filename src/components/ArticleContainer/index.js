@@ -15,7 +15,7 @@ const ArticleContainer = ( {articles, hasError, isLoading, categoryName, keyword
                     </Reader>
                 </Slogan>
                          {categoryName && !keywordSearch && !isLoading && <CategoryName>{categoryName}</CategoryName>}
-                         {keywordSearch && !isLoading && <Keyword>{`Resultados para  " ${keywordSearch} "`}</Keyword>}
+                         {keywordSearch && !isLoading && <Keyword>{`Ud. buscó "${keywordSearch}"`}</Keyword>}
                          {articles && <ArticleList articles={articles}/>}
                          {isLoading && <Loading/>}
                          {hasError && !isLoading && <HasError/>}

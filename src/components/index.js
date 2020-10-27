@@ -7,3 +7,4 @@ export {default as Pagination} from './Pagination'
 export {default as Loading} from './Loading';
 export {default as HasError} from './Error'
 export {default as ArticleList} from './ArticlesList';
+export {default as MobileNavBar} from './MobileNavBar';

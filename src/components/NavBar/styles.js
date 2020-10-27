@@ -20,6 +20,10 @@ export const Nav = styled.nav`
   width: 15%;
   padding: 1%;
   padding-right: 0;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const CategoryTitle = styled.div`

@@ -8,6 +8,10 @@ export const ArticleImg = styled.img`
    -webkit-filter: sepia(80%);
    padding:0;
    height: 220px;
+
+   @media only screen and (max-width: 600px) {
+    height: auto;
+  }
 `;
 
 export const ArticleContainer = styled.article`
@@ -17,6 +21,10 @@ export const ArticleContainer = styled.article`
    flex-direction:column;
    width:40%;
    cursor: pointer;
+
+   @media only screen and (max-width: 600px) {
+    width:100%;
+  }
 `;
 
 export const Title = styled.h4`
@@ -25,6 +33,10 @@ export const Title = styled.h4`
     text-transform: uppercase;
     margin-bottom:0;
     margin: 10px;
+
+    @media only screen and (max-width: 600px) {
+    font-size:0.8em;
+  }
 `;
 
 export const Description = styled.p`

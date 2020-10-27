@@ -5,7 +5,7 @@ import {dataFetching} from '../../utils/api/dataFetching';
 import {getCategoryName} from '../../utils/index'
 import {setCategory} from '../../redux/actions'
 import { Container, Footer, MainWrapper} from './styles';
-import { AsideBar, NamePlate, SearchBar, NavBar, ArticleContainer} from '../../components';
+import { AsideBar, NamePlate, SearchBar, NavBar, ArticleContainer, MobileNavBar} from '../../components';
 
 const Main = () => {
 
@@ -27,6 +27,9 @@ const Main = () => {
 
     const articlesPerPage = 10;
     const [ activePage, setCurrentPage ] = useState( 1 );
+    const [isOpen, setIsOpen]= useState(false);
+
+    const toggle = () =>{setIsOpen(!isOpen)}
 
     const indexOfLastArticle  = activePage * articlesPerPage;
     const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
@@ -35,10 +38,13 @@ const Main = () => {
     return (
         <MainWrapper>
         <div>
-            <NamePlate/>
+            <NamePlate  toggle={toggle}/>
             <SearchBar/>
                 <Container>
                 <NavBar/>
+                <MobileNavBar 
+                isOpen={isOpen} 
+                toggle={toggle}/>
                 <ArticleContainer 
                 articles= {currentArticles} 
                 hasError={hasError} 
@@ -52,10 +58,6 @@ const Main = () => {
             <AsideBar/>
             </Container>
             <Footer>Printed with Love</Footer>
-            
-
-           
-
         </div>
            </MainWrapper>
     )

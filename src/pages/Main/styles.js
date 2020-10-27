@@ -11,12 +11,13 @@ export const Footer = styled.div`
     align-items:center;
     justify-content: center;
     height: 30px;
-    flex-shrink: 0;
     font-family: 'Meie Script', cursive;
-    font-size: 1.4em;
+    font-size: 1em;
     color: black;
+   bottom:0;
+   flex-shrink: 0;
 `;
  
 export const MainWrapper = styled.div`
-   flex: 1 0 auto;
+   min-height:100%;
 `;

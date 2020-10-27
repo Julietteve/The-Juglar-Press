@@ -4,6 +4,10 @@ export const ArticleWrap = styled.div `
     width: 65%;
     padding:0;
     height: auto;
+
+    @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const ArticleOutterBorder = styled.div `
@@ -21,6 +25,11 @@ export const Welcome = styled.div `
     font-size: 2.5em;
     letter-spacing: 5px;
     color:  #282723;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.5em;
+      letter-spacing: 3px;
+  }
 `;
 
 export const Reader = styled.h2 `
@@ -36,6 +45,10 @@ export const Reader = styled.h2 `
    border-bottom: 1px solid  #282723; 
    line-height: 0.1em;
    margin: 10px 0 20px; 
+
+   @media only screen and (max-width: 600px) {
+      font-size: 0.8em;
+  }
 `;
 export const ReaderSpan = styled.span `
     background:#F5F2D5; 
@@ -62,6 +75,10 @@ export const CategoryName = styled.div`
     background-color:  #282723;
     width: 90%;
     margin : 0 auto;
+
+    @media only screen and (max-width: 600px) {
+   font-size:1.8em;
+    }
 `;
 
 export const Keyword = styled.div`
@@ -77,6 +94,10 @@ export const Keyword = styled.div`
     margin : 0 auto;
     font-style:italic;
     text-transform:uppercase;
+
+    @media only screen and (max-width: 600px) {
+   font-size:1.5em;
+    }
 `;
 
 export const PaginationContainer = styled.div`
