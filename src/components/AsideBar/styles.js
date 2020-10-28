@@ -1,25 +1,28 @@
-import styled from 'styled-components/macro';
+import styled from "styled-components/macro";
 
-
-export const Aside = styled.div `
+export const Aside = styled.div`
   height: 200px;
   width: 100%;
   text-align: center;
 `;
 
-export const AsideWrapper = styled.aside `
+export const AsideWrapper = styled.aside`
   display: flex;
   flex-direction: column;
   width: 15%;
   padding: 1%;
   padding-left: 0;
-  
-  @media only screen and (max-width: 600px) {
+
+  @media only screen and (max-width: 768px) {
     display: none;
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 20%;
   }
 `;
 
-export const Title = styled.div `
+export const Title = styled.div`
   margin: 10%;
   text-align: center;
   text-transform: uppercase;
@@ -27,62 +30,72 @@ export const Title = styled.div `
   padding-bottom: 10%;
   border-top: 1px gray solid;
   border-bottom: 1px gray solid;
-  font-family: 'IM Fell English SC', serif;
+  font-family: "IM Fell English SC", serif;
   letter-spacing: 3px;
+
+  @media screen and (max-width: 992px) {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
 `;
 
-export const Atenttion = styled.p `
-  font-family: 'Anton', sans-serif;
+export const Atenttion = styled.p`
+  font-family: "Anton", sans-serif;
   text-align: center;
   font-size: 0.8em;
-  padding-top:5px;
+  padding-top: 5px;
   padding-bottom: 0;
-  margin:0;
+  margin: 0;
 `;
 
-export const Globus = styled.img `
+export const Globus = styled.img`
   margin: auto 0;
   width: 70%;
 `;
 
 export const Trend = styled.button`
-  color:#282723 ;
+  color: #282723;
   text-align: justify;
   text-justify: inter-word;
   font-size: 0.9em;
-  font-family: 'IM Fell English SC', serif;
+  font-family: "IM Fell English SC", serif;
   border-color: transparent;
   background-color: transparent;
   padding: 1%;
-  transition: all .2s ease-in-out; 
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 
-  :focus{
-    outline:none
-    }
-  :hover{
-    transform: scale(1.1);
-    color: #7A786A;
+  :focus {
+    outline: none;
   }
-
+  :hover {
+    transform: scale(1.1);
+    color: #7a786a;
+  }
 `;
 
 export const TrendContainer = styled.div`
   padding: 5px;
   margin: 5%;
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 `;
 
 export const Trendings = styled.div`
-  font-family: 'IM Fell English SC', serif;
+  font-family: "IM Fell English SC", serif;
   text-align: center;
   font-size: 1em;
   border-radius: 25px;
-  border: 1px solid #7A786A;
+  border: 1px solid #7a786a;
   color: #282723;
   padding: 2%;
   margin: 2%;
+
+  @media screen and (max-width: 992px) {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    padding: 3%;
+  }
 `;

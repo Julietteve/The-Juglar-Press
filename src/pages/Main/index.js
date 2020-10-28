@@ -20,9 +20,11 @@ const Main = () => {
     const {hasError, isLoading, keyword, category, articles} = useSelector((state) => state);
     const dispatch = useDispatch();
 
-    if(getCategoryName(category)!== id){
-        dispatch(setCategory(id));
-    }
+    useEffect(() => {
+        if (getCategoryName(category) !== id) {
+          dispatch(setCategory(id));
+        }
+      }, [category, dispatch, id]);
 
     useEffect(()=>{
         dataFetching(dispatch, keyword, category);

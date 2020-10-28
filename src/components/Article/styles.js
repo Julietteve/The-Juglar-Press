@@ -1,72 +1,79 @@
-import styled from 'styled-components/macro';
+import styled from "styled-components/macro";
 
-export const ArticleImg = styled.img `
+export const ArticleImg = styled.img`
   display: block;
   margin: 0 auto;
   width: 100%;
   filter: sepia(80%);
   -webkit-filter: sepia(80%);
-  padding:0;
+  padding: 0;
   height: 220px;
 
-  @media only screen and (max-width: 600px) {
-   height: auto;
+  @media only screen and (max-width: 768px) {
+    height: auto;
+  }
+  @media screen and (max-width: 992px) {
+    height: auto;
   }
 `;
 
-export const ArticleContainer = styled.article `
+export const ArticleContainer = styled.article`
   padding: 10px;
-  margin:1%;
+  margin: 1%;
   display: flex;
-  flex-direction:column;
-  width:40%;
+  flex-direction: column;
+  width: 40%;
   cursor: pointer;
 
-   @media only screen and (max-width: 600px) {
-    width:100%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
   }
 `;
 
-export const Title = styled.h4 `
-  font-family: 'Old Standard TT', serif;
+export const Title = styled.h4`
+  font-family: "Old Standard TT", serif;
   text-align: left;
   text-transform: uppercase;
-  margin-bottom:0;
+  margin-bottom: 0;
   margin: 10px;
 
-    @media only screen and (max-width: 600px) {
-    font-size:0.8em;
+  @media only screen and (max-width: 768px) {
+    font-size: 0.8em;
   }
 `;
 
-export const Description = styled.p `
+export const Description = styled.p`
   margin-top: 2px;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 0.7em;
-  text-align:justify;
+  text-align: justify;
 `;
 
-export const SplitterTop = styled.div `
-  border-top: 2px #7A786A solid;
+export const SplitterTop = styled.div`
+  border-top: 2px #7a786a solid;
   border-bottom: 2px #282723 solid;
   height: 3px;
 `;
 
-export const SplitterBottom = styled.div `
+export const SplitterBottom = styled.div`
   border-top: 1.5px #282723 solid;
   height: 3px;
 `;
 
-export const Source = styled.p `
+export const Source = styled.p`
   margin: 0;
   padding: 2px;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 0.6em;
 `;
 
-export const Overlay = styled.div `
+export const Overlay = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -75,26 +82,26 @@ export const Overlay = styled.div `
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
-  background-color: #F5F2D5;
+  transition: 0.5s ease;
+  background-color: #f5f2d5;
 `;
 
-export const ImageContainer = styled.div `
+export const ImageContainer = styled.div`
   position: relative;
   width: 100%;
 
-  &:hover ${ Overlay }{
+  &:hover ${Overlay} {
     opacity: 1;
   }
 `;
 
-export const EyeWrapper = styled.div `
+export const EyeWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const Eye = styled.img `
+export const Eye = styled.img`
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -102,15 +109,17 @@ export const Eye = styled.img `
   transform: translate(-50%, -50%);
   text-align: center;
   position: absolute;
-  width:60%;
+  width: 60%;
 `;
 
-export const ReadMore = styled.div `
-  font-family: 'Old Standard TT', serif;
+export const ReadMore = styled.div`
+  font-family: "Old Standard TT", serif;
   font-style: italic;
   position: absolute;
   top: 80%;
   text-transform: uppercase;
 `;
 
-export const UrlAnchor = styled.a ``;
+export const UrlAnchor = styled.a`
+  color: black;
+`;

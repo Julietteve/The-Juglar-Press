@@ -7,3 +7,4 @@ export {default as Loading} from './Loading';
 export {default as HasError} from './Error'
 export {default as ArticleList} from './ArticlesList';
 export {default as MobileNavBar} from './MobileNavBar';
+export {default as NotFound} from './NotFound';
